@@ -46,4 +46,17 @@ Now we are ready to generate the table of allele frequencies (considering only s
 ```
 perl get_snps_from_pileups.pl 10 *.filtered.vcf *.pileup > snps.csv
 ```
+
+The [get_snps_from_pileups.pl](get_snps_from_pileups.pl) script attempts to be efficient in its use of memory and compute and can handle genome szies of hundred of Mbp.
+However, if you are working with much smaller genome sizes, e.g. bacterial genomes of a few Mbp, then you can instead use [get_snps_from_pileups_small_genome.pl](get_snps_from_pileups_small_genome.pl):
+
+```
+perl get_snps_from_pileups_small_genome.pl 10 *.filtered.vcf *.pileup > snps.csv
+```
+
+Finally, you can use [get_haplotypes_and_aligned_fasta_from_csv.pl](get_haplotypes_and_aligned_fasta_from_csv.pl)
+to convert the SNPs table (snps.csv) into a Nexus-formatted file that can serve as input into a tools such as PopArt:
  
+```
+perl get_haplotypes_and_aligned_fasta_from_csv.pl snps.csv
+```
