@@ -55,7 +55,7 @@ perl get_snps_from_pileups_small_genome.pl 10 *.filtered.vcf *.pileup > snps.csv
 ```
 
 Finally, you can use [get_haplotypes_and_aligned_fasta_from_csv.pl](get_haplotypes_and_aligned_fasta_from_csv.pl)
-to convert the SNPs table (snps.csv) into a Nexus-formatted file that can serve as input into a tools such as PopArt:
+to convert the SNPs table (snps.csv) into a Nexus-formatted file that can serve as input into a tools such as [PopArt](https://github.com/jessicawleigh/popart):
  
 ```
 perl get_haplotypes_and_aligned_fasta_from_csv.pl snps.csv
